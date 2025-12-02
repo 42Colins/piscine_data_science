@@ -1,18 +1,19 @@
 def NULL_not_found(object: any) -> int:
-    if object != object :
+    if object != object:
         print("Cheese : nan", type(object))
         return 0
-    match object :
-        case None :
+    match object:
+        case None:
             print("Nothing : None", type(object))
         case False:
             print("Fake : False", type(object))
-        case 0 :
+        case 0:
             print("Zero : 0", type(object))
         case str():
-            if (len(object) == 0) :
+            if (len(object) == 0):
                 print("Empty :", object, type(object))
-            else :
+            else:
+                print("Type not Found")
                 return 1
         case _:
             print("Type not Found")
