@@ -1,0 +1,6 @@
+flake8
+numpy
+imageio
+matplotlib
+pandas
+seaborn
