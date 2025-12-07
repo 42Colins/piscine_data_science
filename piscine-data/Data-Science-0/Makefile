@@ -21,7 +21,9 @@ ex02:
 	docker exec postgres psql -U cprojean -d piscineds -f /mnt/table.sql
 	
 ex03:
-	docker exec postgres psql -U cprojean -d piscineds -f /mnt/automatic_table.sh
+	docker exec postgres sh /mnt/automatic_table.sh
 	
 ex04:
-	docker exec postgres psql -U cprojean -d piscineds -f /mnt/items_table.sh
+	docker exec postgres sh /mnt/items_table.sh
+	
+.PHONY: all up down clean stop ex02 ex03 ex04 clean-tables
