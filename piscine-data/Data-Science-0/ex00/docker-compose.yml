@@ -8,7 +8,12 @@ services:
       - 5432:5432
     volumes:
       - postgres_data:/var/lib/postgresql
-      - ~/goinfre/subject:
+      - ~/goinfre/subject:/mnt/subject
+      - ../ex03/db.sql:/mnt/db.sql
+      - ../ex02/table.sql:/mnt/table.sql
+      - ../ex03/automatic_table.sh:/mnt/automatic_table.sh
+      - ../ex04/items_table.sh:/mnt/items_table.sh
+      - ../ex04/items_table.sql:/mnt/items_table.sql
     environment:
       - POSTGRES_PASSWORD=mysecretpassword
       - POSTGRES_USER=cprojean
@@ -23,7 +28,9 @@ services:
       - PGADMIN_DEFAULT_EMAIL=cprojean@42.fr
       - PGADMIN_DEFAULT_PASSWORD=mysecretpassword
 
-networks: bridge
+networks:
+  default:
+    driver: bridge
 
 volumes:
   postgres_data:
