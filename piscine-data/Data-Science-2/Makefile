@@ -29,4 +29,8 @@ ex02:
 ex03:
 	docker exec postgres psql -U cprojean -d piscineds -f /mnt/scripts/ex03/fusion.sql
 	
+everyone:
+	docker exec postgres sh /mnt/scripts/ex00/all.sh
+
+	
 .PHONY: all up down clean stop ex00 ex01 ex02 ex03 ex04 clean-tables
