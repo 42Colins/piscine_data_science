@@ -1,0 +1,11 @@
+numpy
+pandas
+matplotlib
+seaborn
+flake8
+psycopg2-binary
+polars
+connectorx
+pyarrow
+scikit-learn
+statsmodels
