@@ -1,7 +1,7 @@
-DB_USER="mbaron-t"
+DB_USER="cprojean"
 DB_NAME="piscineds"
-CUSTOMER_CSV_DIR="/mnt/csv/customer"
-ITEMS_CSV="/mnt/csv/item/item.csv"
+CUSTOMER_CSV_DIR="/mnt/data/customer"
+ITEMS_CSV="/mnt/data/item/item.csv"
 
 echo "Creating customers table..."
 psql -U "$DB_USER" -d "$DB_NAME" -c "

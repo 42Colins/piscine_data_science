@@ -8,8 +8,8 @@ services:
       - 5432:5432
     volumes:
       - postgres_data:/var/lib/postgresql
-      - ~/goinfre/subject/item:/mnt/data/
-      - ~/goinfre/subject/customer:/mnt/data/customer
+      - ~/goinfre/data/subject/item:/mnt/data/item
+      - ~/goinfre/data/subject/customer:/mnt/data/customer
       - ../ex00/scripts:/mnt/scripts/ex00
       - ../ex01:/mnt/scripts/ex01
       - ../ex02:/mnt/scripts/ex02

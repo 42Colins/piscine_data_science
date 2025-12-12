@@ -2,6 +2,11 @@ DOCKER_COMPOSE = docker compose -f dockers/ex00/docker-compose.yml
 
 all: up ex00 ex01 ex02 ex03
 
+prev:
+	mkdir -p ~/goinfre/data
+	cp -r ~/Downloads/subject ~/goinfre/data
+	cp ~/Downloads/data_2023_feb.csv ~/goinfre/data/subject/customer
+
 up:
 	${DOCKER_COMPOSE} up -d
 	

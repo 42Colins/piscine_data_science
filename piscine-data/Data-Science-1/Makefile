@@ -4,8 +4,8 @@ all: up ex00
 
 prev:
 	mkdir -p ~/goinfre/data
-	cp ~/Downloads/subject ~/goinfre/data
-	cp ~/Downlaods/data_2023_feb.csv ~/goinfre/data/customer
+	cp -r ~/Downloads/subject ~/goinfre/data
+	cp ~/Downloads/data_2023_feb.csv ~/goinfre/data/customer
 
 up:
 	${DOCKER_COMPOSE} up -d
